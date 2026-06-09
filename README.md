@@ -7,7 +7,7 @@
 ![No backend](https://img.shields.io/badge/backend-none-0d8a5f)
 ![Tests](https://img.shields.io/badge/tests-84%20passing-0d8a5f)
 
-**🔗 Live-Demo:** _noch einzusetzen – nach dem ersten GitHub-Pages-Deploy unter `https://juli1111.github.io/waskostetmich/`_
+**🔗 Live-Demo:** _noch einzusetzen – nach dem ersten GitHub-Pages-Deploy unter `https://automationsmanufaktur-labs.github.io/waskostetmich/`_
 
 <!-- Demo-GIF: sobald vorhanden hier einbinden → ![Demo](docs/demo.gif) -->
 
@@ -64,7 +64,7 @@ Deine Bank fehlt? → [Trag ein neues Format bei](docs/bank-format-beitragen.md)
 ## Schnellstart
 
 ```bash
-git clone https://github.com/juli1111/waskostetmich.git
+git clone https://github.com/automationsmanufaktur-labs/waskostetmich.git
 cd waskostetmich
 npm install
 npm run dev        # → http://localhost:5173
