@@ -1,0 +1,14 @@
+WasKostetMich — third-party notices
+====================================
+
+This product includes work derived from the following MIT-licensed project:
+
+taxhacker
+  The German bank-CSV parser profiles in src/core/bank-profiles.ts were
+  inspired by and partly derived from taxhacker (lib/bank-csv-profiles.ts).
+
+  Copyright (c) 2025 Vasily Zubarev, me@vas3k.ru
+  https://github.com/vas3k/taxhacker
+
+  Licensed under the MIT License. The above copyright notice and the MIT
+  permission notice (see LICENSE) are retained in accordance with its terms.

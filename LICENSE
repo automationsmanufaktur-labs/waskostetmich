@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Die deutschen Bank-CSV-Parser-Profile in src/core/bank-profiles.ts wurden
-inspiriert von und teilweise abgeleitet aus dem Projekt "taxhacker"
-(lib/bank-csv-profiles.ts), ebenfalls unter MIT-Lizenz:
-
-  Copyright (c) 2025 Vasily Zubarev, me@vas3k.ru
-  https://github.com/vas3k/taxhacker
