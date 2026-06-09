@@ -1,0 +1,3 @@
+"Bezeichnung Auftragskonto";"IBAN Auftragskonto";"BIC Auftragskonto";"Bankname Auftragskonto";"Buchungstag";"Valutadatum";"Name Zahlungsbeteiligter";"IBAN Zahlungsbeteiligter";"BIC (SWIFT-Code) Zahlungsbeteiligter";"Buchungstext";"Vorgang/Verwendungszweck";"Umsatz";"Währung"
+"Girokonto";"DE12500105170648489890";"GENODEF1XXX";"Volksbank";"03.01.2025";"03.01.2025";"Netflix International B.V.";"NL12ABNA0000000000";"ABNANL2A";"SEPA-Lastschrift";"Netflix Abonnement";"-12,99";"EUR"
+"Girokonto";"DE12500105170648489890";"GENODEF1XXX";"Volksbank";"05.01.2025";"05.01.2025";"Spotify AB";"SE12ESSE0000000000";"ESSESESS";"SEPA-Lastschrift";"Spotify Premium";"-9,99";"EUR"

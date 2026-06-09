@@ -1,0 +1,8 @@
+"Konto";"DE12120300000000000000 / Girokonto"
+"Zeitraum";"01.01.2025 - 31.12.2025"
+"Kontostand vom 31.12.2025";"1.234,56 EUR"
+""
+"Buchungsdatum";"Wertstellung";"Status";"Zahlungspflichtige*r";"Zahlungsempfänger*in";"Verwendungszweck";"Umsatztyp";"IBAN";"Betrag (€)";"Gläubiger-ID";"Mandatsreferenz";"Kundenreferenz"
+"03.01.25";"03.01.25";"Gebucht";"";"Netflix International B.V.";"Netflix Abonnement";"Ausgang";"NL12ABNA0000000000";"-12,99";"NL92ZZZ334088280000";"NFLX-4471";""
+"05.01.25";"05.01.25";"Gebucht";"";"Spotify AB";"Spotify Premium";"Ausgang";"SE12ESSE0000000000";"-9,99";"LU96ZZZ0000000000000000058";"SPOT-99812";""
+"28.01.25";"28.01.25";"Gebucht";"Müller Bau GmbH";"";"Gehalt";"Eingang";"DE12500105170000000000";"2.800,00";"";"";""

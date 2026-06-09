@@ -1,0 +1,15 @@
+Umsatzanzeige;Datei erstellt am 31.12.2025
+
+IBAN;DE12 5001 0517 0648 4898 90
+Kontoname;Girokonto
+Bank;ING
+Kunde;Max Mustermann
+Zeitraum;01.01.2025 - 31.12.2025
+Saldo;1.234,56 EUR
+
+Sortierung;Datum absteigend
+
+"Buchung";"Valuta";"Auftraggeber/Empfänger";"Buchungstext";"Verwendungszweck";"Betrag";"Währung"
+"03.01.2025";"03.01.2025";"Netflix International B.V.";"Lastschrift";"Netflix Abonnement";"-12,99";"EUR"
+"05.01.2025";"05.01.2025";"Spotify AB";"Lastschrift";"Spotify Premium";"-9,99";"EUR"
+"28.01.2025";"28.01.2025";"Müller Bau GmbH";"Gehalt/Rente";"Gehalt Januar";"2.800,00";"EUR"

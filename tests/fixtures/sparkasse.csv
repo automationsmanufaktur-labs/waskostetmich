@@ -1,0 +1,4 @@
+"Auftragskonto";"Buchungstag";"Valutadatum";"Buchungstext";"Verwendungszweck";"Glaeubiger ID";"Mandatsreferenz";"Kundenreferenz (End-to-End)";"Sammlerreferenz";"Lastschrift Ursprungsbetrag";"Auslagenersatz Ruecklastschrift";"Beguenstigter/Zahlungspflichtiger";"Kontonummer/IBAN";"BIC (SWIFT-Code)";"Betrag";"Waehrung";"Info"
+"DE12500105170648489890";"03.01.25";"03.01.25";"FOLGELASTSCHRIFT";"Netflix; Abonnement Januar";"NL92ZZZ334088280000";"NFLX-4471";"";"";"";"";"Netflix International B.V.";"NL12ABNA0000000000";"ABNANL2A";"-12,99";"EUR";"Umsatz gebucht"
+"DE12500105170648489890";"28.01.25";"28.01.25";"GUTSCHRIFT";"Gehalt Januar";"";"";"";"";"";"";"Müller Bau GmbH";"DE12500105170000000000";"INGDDEFFXXX";"2.800,00";"EUR";"Umsatz gebucht"
+"DE12500105170648489890";"15.01.25";"15.01.25";"FOLGELASTSCHRIFT";"Abschlag Strom";"DE00ZZZ00000123456";"SWLG-7782341";"";"";"";"";"Stadtwerke Lüneburg GmbH";"DE00500105170000000001";"NOLADE21XXX";"-89,00";"EUR";"Umsatz gebucht"

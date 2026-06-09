@@ -1,0 +1,4 @@
+"Buchungstag";"Wertstellung";"Umsatzart";"Buchungstext";"Betrag";"Währung";"Auftraggeber / Begünstigter";"Kontonummer / IBAN";"BLZ / BIC"
+"03.01.2025";"03.01.2025";"Lastschrift";"Netflix Abonnement";"-12,99";"EUR";"Netflix International B.V.";"NL12ABNA0000000000";"ABNANL2A"
+"05.01.2025";"05.01.2025";"Lastschrift";"Spotify Premium";"-9,99";"EUR";"Spotify AB";"SE12ESSE0000000000";"ESSESESS"
+"28.01.2025";"28.01.2025";"Gutschrift";"Gehalt Januar";"2.800,00";"EUR";"Müller Bau GmbH";"DE12500105170000000000";"COBADEFFXXX"

@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-standalone
+dist-ssr
+*.local
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Niemals echte Kontodaten ins Repo
+/private-statements/
+*.echte.csv

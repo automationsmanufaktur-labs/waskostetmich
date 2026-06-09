@@ -1,0 +1,8 @@
+"Kontonummer:";"DE12120300000000000000 / EUR"
+"Von:";"01.01.2025"
+"Bis:";"31.12.2025"
+"Kontostand vom 31.12.2025:";"1.234,56 EUR"
+
+"Buchungstag";"Wertstellung";"Buchungstext";"Auftraggeber / Begünstigter";"Verwendungszweck";"Kontonummer";"BLZ";"Betrag (EUR)";"Gläubiger-ID";"Mandatsreferenz";"Kundenreferenz"
+"03.01.2025";"03.01.2025";"FOLGELASTSCHRIFT";"Netflix International B.V.";"Netflix Abonnement";"NL12ABNA0000000000";"";"-12,99";"NL92ZZZ334088280000";"NFLX-4471";""
+"05.01.2025";"05.01.2025";"LASTSCHRIFT";"Spotify AB";"Spotify Premium";"SE12ESSE0000000000";"";"-9,99";"LU96ZZZ0000000000000000058";"SPOT-99812";""

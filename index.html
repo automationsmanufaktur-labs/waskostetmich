@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+      Privacy als erzwungene Garantie, nicht nur als Versprechen:
+      connect-src 'none' blockiert JEDEN fetch/XHR/WebSocket/Beacon hart – auch
+      falls je eine Dependency oder ein versehentlich eingebundenes Asset es
+      versuchen würde. 'unsafe-inline' ist nötig, damit derselbe Build sowohl
+      als getrennte Dateien (GitHub Pages) als auch inline (Standalone-file://)
+      funktioniert. Der Daten-Exfiltrations-Schutz hängt an connect-src, nicht an inline.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WasKostetMich – Abos & versteckte Abbuchungen aus deinem Kontoauszug finden</title>
+    <meta
+      name="description"
+      content="Lade deinen deutschen Kontoauszug (CSV) und entdecke alle Abos und wiederkehrenden Abbuchungen – inkl. schleichender Preiserhöhungen. 100 % im Browser, keine Daten verlassen dein Gerät."
+    />
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="./">
+          <span class="brand-mark" aria-hidden="true">€</span>
+          <span class="brand-name">WasKostetMich</span>
+        </a>
+        <span class="privacy-pill" id="privacy-pill" title="Alle Berechnungen laufen ausschließlich in deinem Browser.">
+          <span class="dot" aria-hidden="true"></span>
+          Läuft 100 % lokal · keine Daten verlassen dein Gerät
+        </span>
+      </div>
+    </header>
+
+    <main class="wrap" id="main">
+      <section class="hero">
+        <h1>Welche Abos kosten dich heimlich Geld?</h1>
+        <p class="lede">
+          Lade deinen Kontoauszug als <strong>CSV</strong> und WasKostetMich findet automatisch
+          alle wiederkehrenden Abbuchungen – und markiert, welche <em>schleichend teurer</em>
+          geworden sind. Deine Bankdaten werden dabei <strong>nie hochgeladen</strong>: Das Einlesen
+          passiert komplett in diesem Browser-Tab.
+        </p>
+      </section>
+
+      <section
+        id="dropzone"
+        class="dropzone"
+        tabindex="0"
+        role="button"
+        aria-label="Kontoauszug-CSV auswählen oder hierher ziehen"
+      >
+        <input type="file" id="file-input" accept=".csv,text/csv" hidden />
+        <div class="dropzone-inner">
+          <div class="dropzone-icon" aria-hidden="true">↑</div>
+          <p class="dropzone-title">CSV hierher ziehen oder klicken zum Auswählen</p>
+          <p class="dropzone-hint">
+            Sparkasse, DKB, ING, Commerzbank, Volksbank, N26, comdirect, Postbank
+          </p>
+          <button type="button" class="btn btn-ghost" id="demo-btn">
+            Erst mit Beispiel-Daten ausprobieren
+          </button>
+        </div>
+      </section>
+
+      <section id="status" class="status" hidden></section>
+      <section id="results" class="results" aria-live="polite"></section>
+
+      <details class="howto">
+        <summary>Wie exportiere ich meinen Kontoauszug als CSV?</summary>
+        <div class="howto-body">
+          <p>
+            Im Online-Banking findest du den Export meist unter „Umsätze" →
+            „Export"/„Herunterladen" → Format <strong>CSV</strong> (bei der Sparkasse:
+            <strong>CSV-CAMT</strong>). Wähle einen möglichst langen Zeitraum (idealerweise
+            12 Monate), damit auch jährliche Abos erkannt werden.
+          </p>
+          <p class="muted">
+            Hinweis: „CSV-CAMT" der Sparkasse ist trotz des Namens eine CSV-Datei – genau richtig.
+            Echte camt.053-XML-Dateien werden (noch) nicht unterstützt.
+          </p>
+        </div>
+      </details>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-claim">
+          <strong>Deine Daten bleiben bei dir.</strong> WasKostetMich sendet deinen Kontoauszug an
+          keinen Server. Du kannst diese Seite sogar offline (ohne Internet) nutzen.
+        </p>
+        <p class="disclaimer">
+          WasKostetMich ist ein kostenloses Informations-Werkzeug und stellt
+          <strong>keine Rechts- oder Finanzberatung</strong> dar. Die Erkennung erfolgt
+          automatisch und schematisch; sie kann Fehler enthalten und ersetzt nicht die Prüfung
+          deiner Verträge und Kontoauszüge. Für eine rechtliche Einschätzung deiner individuellen
+          Situation wende dich an eine Verbraucherzentrale oder einen Rechtsanwalt.
+        </p>
+        <p class="footer-meta">
+          Open Source (MIT) ·
+          <a href="https://github.com/" id="repo-link" rel="noopener noreferrer">Quellcode &amp; Mithilfe</a>
+          · <span id="offline-badge" class="offline-badge"></span>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
