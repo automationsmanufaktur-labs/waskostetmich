@@ -1,67 +1,71 @@
-# WasKostetMich 💸
+<div align="center">
 
-> Lade deinen deutschen Kontoauszug (CSV) und entdecke **alle Abos und wiederkehrenden Abbuchungen** – inklusive der, die **schleichend teurer** geworden sind. Komplett im Browser. **Deine Bankdaten verlassen nie dein Gerät.**
+<img src="https://raw.githubusercontent.com/automationsmanufaktur-labs/waskostetmich/main/assets/banner.svg" alt="WasKostetMich — find every subscription in your bank statement, 100% in your browser" width="100%" />
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-![100% client-side](https://img.shields.io/badge/100%25-client--side-0d8a5f)
-![No backend](https://img.shields.io/badge/backend-none-0d8a5f)
-![Tests](https://img.shields.io/badge/tests-84%20passing-0d8a5f)
+<p>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
+  <img src="https://img.shields.io/badge/100%25-client--side-0d8a5f" alt="100% client-side" />
+  <img src="https://img.shields.io/badge/backend-none-0d8a5f" alt="No backend" />
+  <img src="https://img.shields.io/badge/tests-84%20passing-0d8a5f" alt="84 tests passing" />
+</p>
 
-**🔗 Live-Demo:** _noch einzusetzen – nach dem ersten GitHub-Pages-Deploy unter `https://automationsmanufaktur-labs.github.io/waskostetmich/`_
+**English** · [Deutsch](README.de.md)
 
-<!-- Demo-GIF: sobald vorhanden hier einbinden → ![Demo](docs/demo.gif) -->
+</div>
+
+> Drop in your German bank statement (CSV) and see **every subscription and recurring charge** — including the ones that have **quietly grown more expensive**. Runs entirely in your browser. **Your bank data never leaves your device.**
 
 ---
 
-## Warum?
+## Why
 
-Die meisten Menschen unterschätzen ihre Abo-Ausgaben massiv – und vergessen Verträge, die sie längst nicht mehr nutzen:
+Most people massively underestimate what they spend on subscriptions — and forget contracts they stopped using long ago:
 
-- **42 %** zahlen für ein Abo, das sie nicht mehr nutzen, weil sie die Abbuchung vergessen haben. Befragte schätzten ihre monatlichen Abo-Kosten auf **86 $**, tatsächlich waren es **219 $**. ([C+R Research, 2022, n=1.000](https://www.crresearch.com/blog/subscription-service-statistics-and-costs/))
-- In Deutschland zahlen Streaming-Abonnent:innen im Schnitt **57 €/Monat** (684 €/Jahr) – **32 % haben den Überblick über ihre Abo-Kosten verloren.** ([Bango-Studie via heise, 2024](https://www.heise.de/en/news/Subscribers-in-Germany-pay-an-average-of-EUR-684-per-year-for-streaming-9759428.html))
-- Anbieter erhöhen Preise gern leise. Das **Kammergericht Berlin** (Az. 23 U 15/22) erklärte die Netflix-Preisanpassungsklausel für unwirksam; der BGH machte das Urteil am 30.01.2025 rechtskräftig. Betroffene konnten Geld zurückfordern. ([vzbv](https://www.vzbv.de/urteile/preiserhoehungsklauseln-bei-netflix-und-spotify-sind-unwirksam))
+- **42%** pay for a subscription they no longer use because they forgot the charge. Respondents *estimated* their monthly subscription cost at **$86**; it was actually **$219**. ([C+R Research, 2022, n=1,000](https://www.crresearch.com/blog/subscription-service-statistics-and-costs/))
+- In Germany, streaming subscribers pay **€57/month** on average (€684/year) — and **32% have lost track of their subscription costs**. ([Bango study via heise, 2024](https://www.heise.de/en/news/Subscribers-in-Germany-pay-an-average-of-EUR-684-per-year-for-streaming-9759428.html))
+- Providers like to raise prices quietly. The **Berlin Court of Appeal** (Az. 23 U 15/22) ruled Netflix's price-adjustment clause invalid; the German Federal Court of Justice made it final on 2025-01-30, and affected customers could reclaim money. ([vzbv](https://www.vzbv.de/urteile/preiserhoehungsklauseln-bei-netflix-und-spotify-sind-unwirksam))
 
-WasKostetMich macht diese versteckten Kosten in 10 Sekunden sichtbar – **ohne** dass du irgendwo deine Bankzugangsdaten eingibst oder eine Datei hochlädst.
+WasKostetMich surfaces these hidden costs in 10 seconds — **without** ever asking for bank credentials or uploading a file.
 
-## Was es kann
+## What it does
 
-- 📊 **Erkennt wiederkehrende Abbuchungen** und gruppiert sie pro Anbieter
-- 📈 **Markiert schleichende Preiserhöhungen** („12,99 € → 13,99 € seit August – 12 € mehr pro Jahr")
-- 🗓️ **Monatliche, jährliche, quartalsweise & wöchentliche** Zyklen
-- 🧮 **Hochrechnung** auf Monats- und Jahreskosten + „X Abos = Y €/Monat"-Übersicht
-- 🎯 **Wenig Fehlalarme**: Gehalt, Supermarkt-Einkäufe und Einmalkäufe werden herausgefiltert
-- 🏦 **8 deutsche Bankformate** automatisch erkannt (siehe unten)
-- 🔌 **Funktioniert offline** – lade die [Standalone-Datei](#offline--standalone) und öffne sie per Doppelklick
+- 📊 **Detects recurring charges** and groups them per provider
+- 📈 **Flags creeping price increases** ("€12.99 → €13.99 since August — €12 more per year")
+- 🗓️ **Monthly, yearly, quarterly & weekly** cycles
+- 🧮 **Projects** monthly and annual cost + an "X subscriptions = €Y/month" overview
+- 🎯 **Few false positives**: salary, supermarket runs and one-off purchases are filtered out
+- 🏦 **8 German bank formats** auto-detected (see below)
+- 🔌 **Works offline** — download the [standalone file](#offline--standalone) and open it by double-click
 
-## 🔒 Privacy: nicht versprochen, sondern garantiert
+## 🔒 Privacy: not promised, guaranteed by construction
 
-Die Privacy-Story ist **architektonisch wahr**, nicht nur ein Marketing-Satz:
+The privacy story is **architecturally true**, not just a marketing line:
 
-- Das Einlesen passiert ausschließlich über die Browser-`File`-API (`FileReader`/`arrayBuffer`).
-- Es gibt **kein Backend**, keine Bank-API, keinen Upload, keine Anmeldung.
-- Das gebaute JavaScript-Bundle enthält **kein einziges Netzwerk-Primitiv** – kein `fetch`, kein `XMLHttpRequest`, kein `WebSocket`, kein `sendBeacon`, keine externen URLs. Daten-Exfiltration ist damit technisch unmöglich.
-- **Kein Analytics, keine Fonts/CDN von Dritten** – alle Assets sind lokal gebündelt.
+- Reading happens exclusively through the browser `File` API (`FileReader`/`arrayBuffer`).
+- There is **no backend**, no bank API, no upload, no sign-in.
+- The built JavaScript bundle contains **not a single network primitive** — no `fetch`, no `XMLHttpRequest`, no `WebSocket`, no `sendBeacon`, no external URLs. Data exfiltration is therefore *technically impossible*.
+- **No analytics, no third-party fonts/CDN** — every asset is bundled locally.
 
-**Nachprüfbar:** Öffne die DevTools (F12) → Tab „Netzwerk" → lade deinen Auszug. Du wirst **keinen einzigen Request** sehen. Oder ziehe das Internet ab – die App läuft weiter.
+**Verifiable:** open DevTools (F12) → "Network" tab → load your statement. You will see **zero requests**. Or pull the network plug — the app keeps working.
 
-## Unterstützte Banken
+## Supported banks
 
 | Bank | Format | Status |
 |------|--------|--------|
-| Sparkasse | CSV-CAMT | ✅ Kern |
-| DKB | CSV (altes & neues Banking) | ✅ Kern |
-| ING | CSV | ✅ Kern |
+| Sparkasse | CSV-CAMT | ✅ core |
+| DKB | CSV (old & new banking) | ✅ core |
+| ING | CSV | ✅ core |
 | Commerzbank | CSV | ✅ |
 | Volksbank/Raiffeisenbank | CSV | ✅ |
 | N26 | CSV | ✅ |
 | comdirect | CSV | ✅ |
 | Postbank | CSV | ✅ |
 
-> ℹ️ Bei der Sparkasse heißt das richtige Format **„CSV-CAMT"** – das ist trotz des Namens eine CSV-Datei (kein camt.053-XML) und genau die, die du brauchst.
+> ℹ️ For Sparkasse the right export is called **"CSV-CAMT"** — despite the name it is a CSV file (not camt.053 XML), and exactly the one you need.
 
-Deine Bank fehlt? → [Trag ein neues Format bei](docs/bank-format-beitragen.md) (meist <30 Zeilen).
+Bank missing? → [contribute a new format](docs/bank-format-beitragen.md) (usually <30 lines).
 
-## Schnellstart
+## Quick start
 
 ```bash
 git clone https://github.com/automationsmanufaktur-labs/waskostetmich.git
@@ -71,87 +75,76 @@ npm run dev        # → http://localhost:5173
 ```
 
 ```bash
-npm test           # 84 Unit-Tests (Parser + Detection)
-npm run build      # statische Seite nach dist/
+npm test           # 84 unit tests (parser + detection)
+npm run build      # static site to dist/
 ```
 
-### Offline / Standalone
+### Offline / standalone
 
 ```bash
-npm run build:standalone   # erzeugt dist-standalone/index.html (eine Datei, alles inline)
+npm run build:standalone   # produces dist-standalone/index.html (one file, everything inline)
 ```
 
-Die Datei `dist-standalone/index.html` kannst du speichern und per **Doppelklick offline** öffnen (`file://`) – ganz ohne Server und Internet. Perfekt, wenn du deinen Bankdaten wirklich nicht über den Weg traust.
+Save `dist-standalone/index.html` and open it **offline by double-click** (`file://`) — no server, no internet. Perfect when you really don't trust your bank data anywhere.
 
-## CLI & Analyse mit Claude Code
+## CLI & analysis with Claude Code
 
-Neben der Web-App gibt es eine **Kommandozeilen-Analyse** – ideal für Skripte
-oder die Auswertung mit Claude Code:
+Besides the web app there's a **command-line analysis** — ideal for scripts or for evaluation with Claude Code:
 
 ```bash
-npm run analyze -- examples/beispiel-kontoauszug.csv            # lesbarer Report
-npm run analyze -- pfad/zu/auszug.csv --json                    # strukturiertes JSON
-npm run analyze -- pfad/zu/auszug.csv --json --redact           # Anbieter pseudonymisiert
+npm run analyze -- examples/beispiel-kontoauszug.csv            # human-readable report
+npm run analyze -- path/to/statement.csv --json                # structured JSON
+npm run analyze -- path/to/statement.csv --json --redact        # providers pseudonymized
 ```
 
-Auch die CLI läuft **vollständig lokal** und sendet nichts.
+The CLI also runs **fully locally** and sends nothing.
 
-### Mit Claude Code auswerten lassen
+> ℹ️ **Privacy note:** if you let Claude (or another cloud LLM) judge the result, the **subscription summary** (providers + amounts) enters the LLM context — i.e. goes to its provider. That's a deliberate, separate step with a different trust model than the purely local web app. Claude never receives the **raw CSV**, only the detected subscriptions (no salary, no individual purchases, no IBANs). For maximum discretion use `--redact`.
 
-> ℹ️ **Privacy-Hinweis:** Wenn du Claude (oder ein anderes Cloud-LLM) die Analyse
-> bewerten lässt, gelangt die **Abo-Zusammenfassung** (Anbieter + Beträge) in den
-> LLM-Kontext – also an dessen Anbieter. Das ist ein bewusster, separater Schritt
-> mit anderem Vertrauensmodell als die rein lokale Web-App. Wichtig: Claude bekommt
-> **nie die Roh-CSV**, nur die erkannten Abos (kein Gehalt, keine Einzelkäufe, keine
-> IBANs). Für maximale Diskretion `--redact` nutzen.
+The repo ships a Claude Code skill (`.claude/skills/kosten-analyse/`). In Claude Code you can simply say:
 
-Im Repo liegt ein Claude-Code-Skill (`.claude/skills/kosten-analyse/`). Damit
-kannst du in Claude Code einfach sagen:
+> "Analyze `~/Downloads/statement.csv` and tell me which subscriptions I should cancel."
 
-> „Analysiere `~/Downloads/auszug.csv` und sag mir, welche Abos ich kündigen sollte."
+Claude then calls the CLI (parses locally), prioritizes by annual cost, detects **overlaps** (e.g. two streaming services), flags price increases and gives an assessment with savings potential — without promising legal advice.
 
-Claude ruft dann die CLI auf (parst lokal), priorisiert nach Jahreskosten, erkennt
-**Überlappungen** (z. B. zwei Streaming-Dienste), markiert Preiserhöhungen und
-liefert eine Bewertung mit Sparpotenzial – ohne Rechtsberatung zu versprechen.
-
-## Wie es funktioniert
+## How it works
 
 ```
-Datei → Encoding-Erkennung → Format-Adapter → normalisiertes Transaktions-Modell → Detection-Engine → UI
+file → encoding detection → format adapter → normalized transaction model → detection engine → UI
 ```
 
 **Parser** (`src/core/`)
-- Heuristische **Encoding-Erkennung** (UTF-8-BOM, UTF-8, Windows-1252-Fallback) – deutsche Banken liefern meist Latin-1, das neue DKB-Banking UTF-8 mit BOM.
-- **RFC-4180-konformer CSV-Parser** (verträgt Semikolons, Zeilenumbrüche und HTML im Verwendungszweck).
-- **Header-basierte Bank-Erkennung** statt fester Zeilennummern – überlebt unterschiedliche Vorspann-Längen und Format-Updates.
-- Extraktion der **SEPA-Gläubiger-ID & Mandatsreferenz** als stabiler Schlüssel.
+- Heuristic **encoding detection** (UTF-8 BOM, UTF-8, Windows-1252 fallback) — German banks usually emit Latin-1; the new DKB banking emits UTF-8 with BOM.
+- **RFC-4180-compliant CSV parser** (tolerant of semicolons, line breaks and HTML in the purpose field).
+- **Header-based bank detection** instead of fixed line numbers — survives varying preamble lengths and format updates.
+- Extracts the **SEPA creditor ID & mandate reference** as a stable key.
 
-**Detection-Engine** (`src/detect/`)
-- Gruppierung primär über die Gläubiger-ID, sonst über normalisierte Anbieternamen mit **Token-Set-Ähnlichkeit** (Fuzzy-Match ≥ 0,85, robust gegen „PayPal *Netflix", Referenznummern usw.).
-- Frequenz aus dem **Median der Tagesabstände** mit frequenzabhängigem Toleranzfenster.
-- **Vertrauensstufen**: ab 2 Vorkommen „vermutet", ab 3 „bestätigt" (angelehnt an Plaid).
-- **Preiserhöhung** = neues Niveau, das ≥ 2 Zyklen hält und Mindestschwellen (> 5 % UND > 0,50 €) überschreitet – konservativ, um Schwankungen (Strom/Mobilfunk) nicht fälschlich zu melden.
+**Detection engine** (`src/detect/`)
+- Groups primarily by creditor ID, otherwise by normalized provider names with **token-set similarity** (fuzzy match ≥ 0.85, robust against "PayPal *Netflix", reference numbers, etc.).
+- Frequency from the **median of day gaps** with a frequency-dependent tolerance window.
+- **Confidence tiers**: "suspected" from 2 occurrences, "confirmed" from 3 (modeled on Plaid).
+- **Price increase** = a new level that holds for ≥ 2 cycles and crosses minimum thresholds (> 5% AND > €0.50) — conservative, so it doesn't falsely report fluctuations (electricity/mobile).
 
 ## Roadmap
 
-- [ ] camt.053-XML-Import (echtes ISO-20022, z. B. aus StarMoney/MoneyMoney) – XPaths bereits recherchiert
-- [ ] PDF-Kontoauszüge (client-side)
-- [ ] Weitere Banken (Targobank, Consorsbank, …)
-- [ ] Export der Ergebnisse (lokaler Download)
-- [ ] Kündigungs-Hilfe-Links pro Anbieter
+- [ ] camt.053 XML import (real ISO-20022, e.g. from StarMoney/MoneyMoney) — XPaths already researched
+- [ ] PDF bank statements (client-side)
+- [ ] More banks (Targobank, Consorsbank, …)
+- [ ] Export of results (local download)
+- [ ] Cancellation-help links per provider
 
-## Mitmachen
+## Contributing
 
-Beiträge willkommen! Siehe [CONTRIBUTING.md](CONTRIBUTING.md). Der häufigste Beitrag – ein **neues Bankformat** – ist in [docs/bank-format-beitragen.md](docs/bank-format-beitragen.md) Schritt für Schritt erklärt.
+Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md). The most common contribution — a **new bank format** — is explained step by step in [docs/bank-format-beitragen.md](docs/bank-format-beitragen.md).
 
-## ⚖️ Haftungsausschluss
+## ⚖️ Disclaimer
 
-WasKostetMich ist ein kostenloses **Informations-Werkzeug** und stellt **keine Rechts- oder Finanzberatung** dar. Die Erkennung erfolgt automatisch und schematisch; sie kann Fehler enthalten und ersetzt nicht die Prüfung deiner Verträge. Für eine rechtliche Einschätzung deiner individuellen Situation wende dich an eine Verbraucherzentrale oder einen Rechtsanwalt.
+WasKostetMich is a free **information tool** and does **not constitute legal or financial advice**. Detection is automatic and heuristic; it may contain errors and does not replace checking your contracts. For a legal assessment of your individual situation, contact a consumer advice center (Verbraucherzentrale) or a lawyer.
 
 ## Credits
 
-Die deutschen Bank-CSV-Parser-Profile sind inspiriert von [taxhacker](https://github.com/vas3k/taxhacker) (MIT, © Vasily Zubarev).
+The German bank CSV parser profiles are inspired by [taxhacker](https://github.com/vas3k/taxhacker) (MIT, © Vasily Zubarev).
 
-## Lizenz
+## License
 
-[MIT](LICENSE) – mach damit, was du willst.
+[MIT](LICENSE) — do whatever you want with it.

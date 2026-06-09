@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" role="img" aria-label="WasKostetMich — find every subscription in your bank statement, 100% in your browser">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/>
+      <stop offset="1" stop-color="#0C1512"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="0.16" cy="0.18" r="0.5">
+      <stop offset="0" stop-color="#2DD4A7" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#2DD4A7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="0.9" cy="0.95" r="0.55">
+      <stop offset="0" stop-color="#0D8A5F" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0D8A5F" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .sans { font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <rect width="1280" height="420" fill="url(#glowL)"/>
+  <rect width="1280" height="420" fill="url(#glowR)"/>
+  <rect x="0.5" y="0.5" width="1279" height="419" fill="none" stroke="#202A26" stroke-width="1"/>
+
+  <!-- left: wordmark + tagline -->
+  <text x="72" y="92" class="mono" font-size="15" letter-spacing="5" fill="#2DD4A7">OPEN-SOURCE&#160;&#160;·&#160;&#160;CLIENT-SIDE</text>
+
+  <text x="70" y="172" class="sans" font-size="62" font-weight="800" fill="#E6EDF3" letter-spacing="-1.5">WasKostetMich</text>
+
+  <text x="72" y="224" class="sans" font-size="26" fill="#ADBAC7">
+    <tspan fill="#5EEAD4" font-weight="700">Bank statement CSV</tspan>
+    <tspan fill="#6E7681">&#160;&#160;→&#160;&#160;</tspan>
+    <tspan fill="#34D399" font-weight="700">every subscription</tspan>
+  </text>
+  <text x="72" y="256" class="sans" font-size="20" fill="#8B98A5">…including the ones that crept up in price.</text>
+
+  <!-- pills -->
+  <g class="mono" font-size="15">
+    <g>
+      <rect x="72" y="284" width="64" height="34" rx="17" fill="#0F1814" stroke="#214034"/>
+      <text x="104" y="306" text-anchor="middle" fill="#C9D1D9">MIT</text>
+    </g>
+    <g>
+      <rect x="148" y="284" width="124" height="34" rx="17" fill="#0F1814" stroke="#214034"/>
+      <text x="210" y="306" text-anchor="middle" fill="#C9D1D9">client-side</text>
+    </g>
+    <g>
+      <rect x="284" y="284" width="126" height="34" rx="17" fill="#0F1814" stroke="#214034"/>
+      <text x="347" y="306" text-anchor="middle" fill="#C9D1D9">no backend</text>
+    </g>
+    <g>
+      <rect x="422" y="284" width="140" height="34" rx="17" fill="#0F1814" stroke="#214034"/>
+      <text x="492" y="306" text-anchor="middle" fill="#C9D1D9">8 DE banks</text>
+    </g>
+  </g>
+
+  <text x="72" y="360" class="sans" font-size="15" fill="#6E7681">Your bank data never leaves your device · verify it in DevTools: zero network requests</text>
+
+  <!-- right: statement with highlighted recurring rows + magnifier -->
+  <g transform="translate(854,96)">
+    <rect x="0" y="0" width="230" height="228" rx="16" fill="#0F1814" stroke="#214034"/>
+    <rect x="0" y="0" width="230" height="44" rx="16" fill="#13201A"/>
+    <rect x="0" y="28" width="230" height="16" fill="#13201A"/>
+    <text x="22" y="30" class="mono" font-size="14" fill="#2DD4A7">KONTOAUSZUG.csv</text>
+
+    <!-- ordinary rows (muted) -->
+    <g stroke="#243A31" stroke-width="6" stroke-linecap="round">
+      <line x1="22" y1="74" x2="150" y2="74"/>
+      <line x1="22" y1="150" x2="150" y2="150"/>
+    </g>
+
+    <!-- recurring row 1 (highlighted) -->
+    <rect x="12" y="88" width="206" height="26" rx="8" fill="#11271E" stroke="#1F6B4D"/>
+    <line x1="22" y1="101" x2="120" y2="101" stroke="#34D399" stroke-width="6" stroke-linecap="round"/>
+    <text x="208" y="106" text-anchor="end" class="mono" font-size="13" fill="#5EEAD4">12,99 €</text>
+
+    <!-- recurring row 2 (highlighted + price-up) -->
+    <rect x="12" y="120" width="206" height="26" rx="8" fill="#11271E" stroke="#1F6B4D"/>
+    <line x1="22" y1="133" x2="108" y2="133" stroke="#34D399" stroke-width="6" stroke-linecap="round"/>
+    <text x="208" y="138" text-anchor="end" class="mono" font-size="13" fill="#5EEAD4">13,99 €</text>
+    <text x="150" y="138" text-anchor="end" class="mono" font-size="13" fill="#F0883E">↑</text>
+
+    <!-- recurring row 3 (highlighted) -->
+    <rect x="12" y="176" width="206" height="26" rx="8" fill="#11271E" stroke="#1F6B4D"/>
+    <line x1="22" y1="189" x2="132" y2="189" stroke="#34D399" stroke-width="6" stroke-linecap="round"/>
+    <text x="208" y="194" text-anchor="end" class="mono" font-size="13" fill="#5EEAD4">9,99 €</text>
+
+    <!-- magnifier -->
+    <g transform="translate(150,150)">
+      <circle cx="0" cy="0" r="34" fill="none" stroke="#34D399" stroke-width="6"/>
+      <line x1="24" y1="24" x2="46" y2="46" stroke="#34D399" stroke-width="8" stroke-linecap="round"/>
+      <text x="0" y="6" text-anchor="middle" class="sans" font-size="22" font-weight="700" fill="#5EEAD4">€</text>
+    </g>
+  </g>
+</svg>
